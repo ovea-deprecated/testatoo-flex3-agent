@@ -1,0 +1,65 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.testatoo</groupId>
+        <artifactId>testatoo</artifactId>
+        <version>3</version>
+    </parent>
+
+    <groupId>org.testatoo.cartridge</groupId>
+    <artifactId>testatoo-flex3-agent</artifactId>
+    <version>1.0-rc1-SNAPSHOT</version>
+    <packaging>swc</packaging>
+
+    <name>flex3-agent</name>
+    <description>Testatoo Flex3 Agent</description>
+
+    <scm>
+        <connection>scm:git:git@github.com:Ovea/${project.name}.git</connection>
+        <developerConnection>scm:git:git@github.com:Ovea/${project.name}.git</developerConnection>
+        <url>http://github.com/Ovea/${project.name}</url>
+    </scm>
+
+    <build>
+        <sourceDirectory>src/main/flex</sourceDirectory>
+        <plugins>
+            <plugin>
+                <groupId>org.sonatype.flexmojos</groupId>
+                <artifactId>flexmojos-maven-plugin</artifactId>
+                <version>3.8</version>
+                <extensions>true</extensions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.adobe.flex.framework</groupId>
+            <artifactId>flex-framework</artifactId>
+            <version>3.2.0.3958</version>
+            <type>pom</type>
+        </dependency>
+
+        <dependency>
+            <groupId>com.adobe.flexunit</groupId>
+            <artifactId>flexunit</artifactId>
+            <version>0.85</version>
+            <type>swc</type>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>flex-mojos-repository</id>
+            <url>http://repository.sonatype.org/content/groups/flexgroup/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </repositories>
+
+</project>
