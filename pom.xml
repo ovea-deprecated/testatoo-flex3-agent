@@ -45,14 +45,4 @@
         </dependency>
     </dependencies>
 
-    <repositories>
-        <repository>
-            <id>flex-mojos-repository</id>
-            <url>http://repository.sonatype.org/content/groups/flexgroup/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-        </repository>
-    </repositories>
-
 </project>
